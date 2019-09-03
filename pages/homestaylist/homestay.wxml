@@ -1,0 +1,120 @@
+<!--pages/homestay/homestay.wxml-->
+<view class="top">
+  <!-- 搜索 -->
+  <view class="search_box">
+    <text class="address">杭州</text>
+    <view class="open_end_time">
+      <view>
+        <text>住</text>
+        <text class="date">{{startDate}}</text>
+      </view>
+      <view>
+        <text>离</text>
+        <text class="date">{{endDate}}</text>
+      </view>
+    </view>
+    <input confirm-type="search" class="search" placeholder="关键字/民宿名"></input>
+  </view>
+  <!-- 筛选 -->
+  <view class="screen_box">
+    <view bindtap="setCondition" class="screen_item {{screenType === idx?'active':''}}" wx:for="{{screenList}}" wx:key='idx' wx:for-index="idx" wx:for-item="item" data-idx='{{idx}}'>{{item}}
+      <span></span>
+    </view>
+  </view>
+  <!-- 标签筛选 -->
+  <scroll-view class="tag-scroll" scroll-x='true' style="width: 720rpx">
+    <view class="tag_item" wx:for='{{tagList}}' wx:for-item='tag' wx:key='idx'>{{tag}}</view>
+  </scroll-view>
+  <!-- 推荐排序 -->
+  <view class="screen_list">
+    <text wx:if='{{screenType === 0}}' class="recommend" wx:for='{{recommend}}' wx:for-item='item' wx:for-index='index' wx:key='index' bindtap="onClick_">{{item}}</text>
+  </view>
+  <!-- 筛选弹窗 -->
+  <view class="screen_list" wx:if='{{screenType === 2}}'>
+    <scroll-view scroll-y='true' style="height:745rpx;">
+      <view class="screen_module">
+        <text class="title">户型</text>
+        <view class="list_item">
+          <text wx:for='{{apartmentList}}' wx:for-item='items' wx:for-index='idx' wx:key="idx" class="default {{(idx+1)%4 === 0?'clear':''}},{{apartment===idx?'active':''}}" bindtap="onClick_setApartment">{{items}}</text>
+        </view>
+      </view>
+      <view class="screen_module">
+        <text class="title">可住人数</text>
+        <view class="list_item">
+          <text wx:for='{{peopleNum}}' wx:for-item='items' wx:for-index='idx' wx:key="idx" class="default {{(idx+1)%4 === 0?'clear':''}}" bindtap="onClick_setPeople">{{items}}</text>
+        </view>
+      </view>
+      <view class="screen_module">
+        <text class="title">出租类型</text>
+        <view class="list_item">
+          <view class="{{(idx+1)%3 === 0?'clear':''}} diamond" wx:for='{{rentalType}}' wx:for-item='items' wx:for-index='idx' wx:key="idx">
+            <text class="head">{{items.type}}</text>
+            <text class="val">{{items.value}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="screen_module">
+        <text class="title">设施服务</text>
+        <view class="list_item">
+          <view wx:for='{{serviceList}}' wx:for-item='items' wx:for-index='idx' wx:key="idx" class="service {{(idx+1)%4 === 0?'clear':''}}" bindtap="onClick_setService" id='{{idx}}'>
+            <image src="{{items.imgUrl}}"></image>
+            <text class="">{{items.val}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="screen_module">
+        <text class="title">设计风格</text>
+        <view class="list_item">
+          <text wx:for='{{designStyle}}' wx:for-item='items' wx:for-index='idx' wx:key="idx" class="default {{(idx+1)%4 === 0?'clear':''}}" bindtap="onClick_setPeople">{{items}}</text>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="btn_box">
+      <text class="reset" bindtap="onClick_reset">重置</text>
+      <text class="confrim" bindtap="">确定</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{screenType !== ''}}" bindtap="onClick_offScreen" class="screen_bg"></view>
+<view class="body">
+  <view class="homestay_item" wx:for='{{bodyList}}' wx:key='index' wx:for-item='list' wx:for-index='index'>
+    <view class="swiper_box">
+      <!-- <swiper indicator-dots="true" indicator-color='rgba(254,255,255,.6)' indicator-active-color='#feffff' autoplay="true" interval="3000" duration="1000" circular='true'>
+          <swiper-item wx:for='{{swiperList}}' wx:key='item'> -->
+      <image class="homestay_img" src="../../images/swiper.png" />
+      <!-- </swiper-item>
+      </swiper> -->
+      <view class="collection">
+        <image src="../../images/Collection.png"></image>
+      </view>
+    </view>
+    <view class="homestay_info">
+      <view class="taglist">
+        <text class="tag">可做饭</text>
+        <text class="tag">有停车位</text>
+        <text class="tag">近超市</text>
+        <text class="tag">自行入住</text>
+      </view>
+      <view class="homestay_name">
+        <text class="name">千岛湖全景湖景北欧ins风高层公寓</text>
+      </view>
+      <view class="star_box">
+        <text class="">{{star}}</text>
+        <view class="star" style="background-image:url('http://picture.juyingzhiye.com//2019/201908291542298333573.png')">
+          <view class="active" style="width: {{(star/5)*100}}%;background-image:url('http://picture.juyingzhiye.com//2019/201908291541513333591.png')"></view>
+        </view>
+      </view>
+      <view class="homestay_describe">
+        <text class="">34点评/舒适 . 1居2床2人</text>
+      </view>
+      <view class="price_box">
+        <text class="price_icon">￥</text>
+        <text class="price_num">385</text>
+        <text class="price_text">起</text>
+        <text class='price_del'>￥430</text>
+        <text class="price_tag">今日特价</text>
+        <text class="price_tag">暑假特惠</text>
+      </view>
+    </view>
+  </view>
+</view>

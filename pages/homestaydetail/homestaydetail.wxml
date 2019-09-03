@@ -1,0 +1,88 @@
+<!--pages/homestaydetail/homestaydetail.wxml-->
+<!-- 头部 -->
+<view class="top">
+  <view class="swiper_box">
+    <swiper>
+      <swiper-item wx:for='{{swiperList}}' wx:key='item'>
+        <image class="" src="../../images/swiper.png"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="present">
+    <view class="tag_box">
+      <text wx:for='{{tagList}}' wx:for-item='tag' wx:for-index='index' wx:key="index" class="tag">{{tag}}</text>
+    </view>
+    <view class="title">
+      <view class="name">{{name}}</view>
+      <view class="line"></view>
+      <view class="share">
+        <image src="../../images/share.png"></image>
+      </view>
+    </view>
+    <view class="date">入
+      <text class="startdate">{{startDate}}</text>
+      <text class="duration">1晚</text>离
+      <text class="enddate">{{endDate}}       </text>
+      <text class="line">|</text>不限人数
+      <text class="right_arrow"></text>
+    </view>
+    <view class="explain">
+      <view class="explain_item">
+        <image class="icon" src=""></image>
+        <text>整套出租</text>
+        <text>50m²/酒店式公寓</text>
+      </view>
+      <view class="explain_item">
+        <image class="icon" src=""></image>
+        <text>1室0厅  1厨1卫</text>
+        <text>可做饭</text>
+      </view>
+      <view class="explain_item">
+        <image class="icon" src=""></image>
+        <text class="">宜住2人  1床</text>
+        <text class="">大床2*1.8米</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+<!-- 房东信息 -->
+<view class="landlord">
+  <image class="avatar" src=""></image>
+  <view class="landlordname">
+    <text>美丽的朱碧石</text>
+    <image class="icon_auth" src="../../images/icon_auth.png"></image>
+  </view>
+  <text class="landlordtype">个人房东</text>
+</view>
+<!-- 评分 -->
+<view class="rank">
+  <view class="score">
+    4.6
+    <view class="star_box">
+      <view class="star" style="background-image:url('http://picture.juyingzhiye.com//2019/201908291542298333573.png')">
+        <view class="active" style="width: {{(4.6/5)*100}}%;background-image:url('http://picture.juyingzhiye.com//2019/201908291541513333591.png')"></view>
+      </view>
+    </view>
+  </view>
+  <view class="classify">
+    <view>
+      <text>卫生</text>
+      <view class="progress">
+        <view class="content"></view>
+      </view>
+      <text>4.6</text>
+    </view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+</view>
+<!-- 评论 -->
+<!-- 描述 -->
+<!-- 位置 -->
+<!-- 服务 -->
+<!-- 预定须知 -->
+<!-- 入住须知 -->
+<!-- 额外费用 -->
+<!-- 周边推荐 -->

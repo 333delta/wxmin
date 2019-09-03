@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/homestaydetail/homestaydetail",
+    "pages/homestaylist/homestay",
+    "pages/index/index",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "主页",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

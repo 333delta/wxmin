@@ -1,0 +1,255 @@
+/* pages/homestaydetail/homestaydetail.wxss */
+
+page{
+  background: #F7F8FA;
+}
+
+.top{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.top .swiper_box{
+  width: 100%;
+  height: 500rpx;
+  position: relative;
+}
+.top .swiper_box swiper{
+  width: 100%;
+  height: 100%;
+}
+
+swiper swiper-item image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.top .present{
+  padding: 40rpx;
+  background: #fff;
+}
+.present .tag_box{
+  overflow: hidden;
+  width: 100%;
+  height: 30rpx;
+  margin-bottom: 26rpx;
+} 
+.present .tag_box .tag{
+  float: left;
+  padding: 0 4rpx;
+  margin-right: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  background: #EEF4F7;
+  color: #8C9BA6;
+}
+
+.present .title{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+}
+
+.present .title .name{
+  width: 536rpx;
+  height: auto;
+  color: #2D2D2D;
+  font-size:46rpx;
+  float: left;
+  line-height: 56rpx;
+}
+
+.present .title .line{
+  width: 1rpx;
+  height: 44rpx;
+  background: #E7E7E7;
+  float: left;
+  margin-top: 8rpx;
+}
+
+.present .share{
+  float: right;
+  margin-top: 8rpx;
+}
+
+.present .share image{
+  width: 43rpx;
+  height: 71rpx;
+}
+
+.present .date{
+  background: #64A5FE;
+  width: 622rpx;
+  height: 88rpx;
+  color: #fff;
+  border-radius: 12rpx;
+  line-height: 88rpx;
+  font-size:28rpx;
+  padding: 0 24rpx;
+}
+
+.present .date .startdate{
+  width: 130rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  padding: 0 10rpx;
+}
+
+.present .date .duration{
+  height: 22rpx;
+  padding: 2.5rpx 20rpx;
+  border-radius: 32rpx;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  border: 1rpx solid #FFF;
+  margin: 0 20rpx;
+}
+
+.present .date .enddate{
+  width: 130rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  padding: 0 10rpx;
+}
+
+.present .date .line{
+  width:1rpx;
+  height:20rpx;
+  /* background:rgba(255,255,255,1); */
+  opacity:0.5;
+  margin: 2rpx 20rpx;
+  overflow: hidden;
+}
+
+.present .explain{
+  width: 100%;
+  display: flex;
+}
+
+.top .explain .explain_item{
+  flex: 1;
+}
+
+.top .explain .explain_item image{
+  width: 47rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto 24rpx auto;
+}
+
+.top .explain .explain_item text{
+  font-size: 22rpx;
+  display: block;
+  text-align: center;
+  margin: 0 auto 15rpx;
+  color: #313131;
+}
+
+.top .explain .explain_item text:last-child{
+  margin: 0 auto;
+  color: #596269;
+}
+
+.landlord{
+  width: 100%;
+  height: 220rpx;
+  padding: 50rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.landlord .avatar{
+  width: 122rpx;
+  height: 122rpx;
+  float: left;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+
+.landlord .icon_auth{
+  width: 150rpx;
+  height: 36rpx;
+  margin-top: 2rpx;
+}
+
+.landlord .landlordname{
+  font-size:32rpx;
+}
+
+.landlord .landlordtype{
+  font-size: 28rpx;
+  color: #9B9A9A;
+}
+
+.rank{
+  width: 100%;
+  background: #fff;
+  padding: 60rpx 70rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.rank .score{
+  width: 138rpx;
+  text-align: center;
+  color: #3C3C3C;
+  font-size:64rpx;
+}
+.rank .score .star_box{
+  width: 138rpx;
+  height: 14rpx;
+  position: absolute;
+  text-align: center;
+  color: #2d2d2d;
+  font-family: FZDHTJW--GB1-0;
+	font-size: 34rpx;
+}
+
+.star_box .star{
+  width: 94rpx;
+  margin: 0 21rpx;
+  height: 14rpx;
+  position: relative;
+  background-position: 0 0;
+  background-size: 94rpx 100%;
+}
+
+.star_box .star image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.star .active{
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: 0 0;
+  background-size: 94rpx 100%;
+}
+
+.rank .progress{
+  width: 100rpx;
+  height: 8rpx;
+  background: #D8D8D8;
+  border-radius:4rpx;
+}
+
+.rank .content{
+  background:linear-gradient(90deg,rgba(255,160,64,1),rgba(255,192,64,1));
+  border-radius:4rpx;
+}
+
+.rank .classify{
+  width: 205rpx;
+  height: auto;
+}
+
+.classify view text{
+  float:left;
+}

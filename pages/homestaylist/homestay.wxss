@@ -1,0 +1,446 @@
+/* pages/homestay/homestay.wxss */
+.top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 250rpx;
+  background: #fff;
+  z-index: 10;
+}
+.top .search_box{
+  width: 690rpx;
+  height: 64rpx;
+  padding: 8rpx 0;
+  box-sizing: border-box;
+  border-radius: 64rpx;
+  background: #f4f4f4;
+  margin: 0 auto;
+}
+.top .address{
+  width: 100rpx;
+  height: 100%;
+  float: left;
+  line-height: 48rpx;
+  font-size: 28rpx;
+  text-align: center;
+  border-right: 2rpx solid #dddddd;
+}
+.top .open_end_time{
+  width: 125rpx;
+  font-size: 22rpx;
+  height: 100%;
+  line-height: 24rpx;
+  float: left;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-right: 2rpx solid #dddddd;
+}
+.top .open_end_time view{
+  text-align: center;
+  height: 24rpx;
+}
+.top .open_end_time view text{
+  float: left;
+  margin-right: 4rpx;
+}
+.top .open_end_time view .date{
+  color: #2681fe;
+  float: left;
+  line-height: 24rpx;
+  padding-top: 2rpx;
+  margin: 0;
+}
+.top .search{
+  font-size: 30rpx;
+  height: 100%;
+  padding-left: 24rpx;
+  color: #999999;
+}
+.top .screen_box{
+  width: 690rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: flex;
+  margin: 30rpx auto 0;
+  font-size: 28rpx;
+}
+.top .screen_box .screen_item{
+  flex: 1;
+  position: relative;
+  padding-right: 24rpx;
+  box-sizing: 16rpx;
+  margin-right: 145rpx;
+  font-size: 28rpx;
+  color: #484747;
+}
+
+.top .screen_box .screen_item.active{
+  color: #2681fe;
+}
+
+.top .screen_box .screen_item.active span{
+  border-top: 10rpx solid #2681fe;
+  transform: rotate(180deg);
+}
+
+.top .screen_box .screen_item:last-child{
+  text-align: right;
+  margin: 0;
+}
+.top .screen_box .screen_item span{
+  width:0;
+	height:0;
+	border-right: 10rpx solid transparent;
+	border-left: 10rpx solid transparent;
+	border-top: 10rpx solid #7b7b7b;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -4rpx;
+}
+.screen_bg{
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.top .screen_list{
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  left: 0;
+  top: 120rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.top .screen_list scroll-view{
+  width: 750rpx;
+}
+.top .screen_list .screen_module{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 26rpx;
+  color: #3c3c3c;
+  margin-bottom: 50rpx;
+  padding: 0 30rpx;
+}
+
+.top .screen_list .screen_module .title{
+  font-family: SourceHanSansCN-Bold;
+	font-size: 28rpx;
+  display: block;
+  margin-bottom: 22rpx;
+}
+
+.top .screen_list .screen_module .list_item{
+  overflow: hidden;
+  width: 100%;
+}
+
+.screen_list .screen_module .list_item text.default{
+  width: 160rpx;
+  height: 64rpx;
+  text-align: center;
+  line-height: 64rpx;
+  font-family: SourceHanSansCN-Regular;
+	font-size: 26rpx;
+  color: #3c3c3c;
+  float: left;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+  background-color: #f5f5f5;
+  border-radius: 6rpx;
+}
+.screen_list .screen_module .list_item text.clear{
+  margin-right: 0;
+}
+.screen_list .screen_module .list_item .diamond{
+  width: 218rpx;
+  height: 132rpx;
+  padding: 16rpx;
+  box-sizing: border-box;
+  font-family: SourceHanSansCN-Regular;
+	font-size: 26rpx;
+  color: #3c3c3c;
+  float: left;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+  background-color: #f5f5f5;
+  border-radius: 6rpx;
+}
+.screen_list .screen_module .list_item .diamond.clear{
+  margin-right: 0;
+}
+.screen_list .screen_module .list_item .service{
+  width: 160rpx;
+	height: 132rpx;
+  padding: 28rpx 24rpx 24rpx 24rpx;
+  box-sizing: border-box;
+	background-color: #f5f5f5;
+	border-radius: 6rpx;
+  color: #3c3c3c;
+  float: left;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+  text-align: center;
+}
+.screen_list .screen_module .list_item .service.clear{
+  margin-right: 0;
+}
+.screen_list .screen_module .list_item .service.active{
+	color: #2681fe;
+  background-color: rgba(38, 129, 254, .15);
+}
+.screen_list .btn_box{
+  border-top: 1rpx solid #e9e9e9;
+  width: 100%;
+  height: 90rpx;
+}
+.screen_list .btn_box .reset{
+  width: 50%;
+  height: 90rpx;
+  font-family: SourceHanSansCN-Regular;
+	font-size: 34rpx;
+  text-align: center;
+  line-height: 90rpx;
+  float: left;
+}
+.screen_list .btn_box .confrim{
+  width: 50%;
+  height: 90rpx;
+  font-family: SourceHanSansCN-Regular;
+	font-size: 34rpx;
+  text-align: center;
+  line-height: 90rpx;
+  float: left;
+  color: #fff;
+  background: #64a5fe;
+}
+.screen_list .recommend{
+  /* width: 100%; */
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  display: block;
+  font-size: 28rpx;
+  margin: 0 40rpx;
+  border-bottom: 1rpx solid #E9E9E9;
+}
+
+.screen_list .recommend:last-child{
+  border-bottom: 0;
+}
+
+.screen_module .list_item .service image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto 15rpx auto;
+}
+.screen_module .list_item .service text{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 26rpx;
+  color: #3c3c3c;
+}
+.screen_module .list_item .diamond .head{
+  font-family: SourceHanSansCN-Medium;
+	font-size: 22rpx;
+  line-height: 22rpx;
+	color: #010101;
+  display: block;
+  margin-bottom: 13rpx;
+}
+
+.screen_module .list_item .diamond .val{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 20rpx;
+	color: #000000;
+  line-height: 26rpx;
+  display: block;
+  width: 140rpx;
+}
+
+.top .tag-scroll{
+  margin-top: 40rpx;
+  padding-left: 30rpx;
+  height: 60rpx;
+  width: 690rpx;
+  white-space: nowrap;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.top .tag-scroll .tag_item{
+  width: 142rpx;
+	height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+	background-color: #f4f4f4;
+	border-radius: 28rpx;
+  font-size: 24rpx;
+  color: #3c3c3c;
+  margin-right: 14rpx;
+  display: inline-block;
+}
+
+.body{
+  margin-top: 250rpx;
+  width: 100%;
+}
+.body .homestay_item{
+  width: 750rpx;
+  height: 750rpx;
+  display: inline-block;
+  position: relative;
+}
+.body .homestay_item .swiper_box{
+  width: 100%;
+  height: 500rpx;
+}
+
+.body .homestay_item .swiper_box .homestay_img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.body .homestay_item .swiper_box swiper{
+  width: 100%;
+  height: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+swiper swiper-item{
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+swiper swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+
+.body .homestay_item .collection{
+  position: absolute;
+  right: 60rpx;
+  top: 50rpx;
+  width: 33rpx;
+  height: 30rpx;
+}
+
+.body .homestay_item .collection image{
+  width: 100%;
+  height: 100%;
+}
+
+.body .homestay_item .homestay_info{
+  width: 690rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.body .homestay_info .taglist{
+  overflow: hidden;
+  width: 520rpx;
+}
+.body .homestay_info .taglist .tag{
+  float: left;
+  color: #8c9ba6;
+  font-size: 20rpx;
+  background-color: #eef4f7;
+  border-radius: 4rpx;
+  padding: 4rpx;
+  margin-right: 10rpx;
+}
+.body .homestay_info .homestay_name{
+  width: 520rpx;
+  margin-top: 20rpx;
+	font-family: SourceHanSansCN-Medium;
+	font-size: 34rpx;
+	line-height: 34rpx;
+	color: #2d2d2d;
+}
+.body .homestay_info .homestay_describe{
+	font-family: MicrosoftYaHei;
+	font-size: 22rpx;
+	line-height: 22rpx;
+	color: #4c4c4c;
+  margin-top: 17rpx;
+}
+
+.body .homestay_info .price_box{
+  margin-top: 30rpx;
+}
+.body .homestay_info .price_box .price_icon{
+  font-family: SourceHanSansCN-Bold;
+	font-size: 28rpx;
+	color: #ef4728;
+}
+.body .homestay_info .price_box .price_num{
+  font-family: SourceHanSansCN-Bold;
+	font-size: 42rpx;
+	color: #ef4728;
+  margin-right: 8rpx;
+}
+.body .homestay_info .price_box .price_text{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 22rpx;
+	line-height: 40rpx;
+	color: #b3b3b3;
+  margin-right: 17rpx;
+}
+.body .homestay_info .price_box .price_del{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color: #a1a1a1;
+  margin-right: 30rpx;
+  text-decoration:line-through;
+}
+.body .homestay_info .price_tag{
+  color: #ffa158;
+  font-size: 20rpx;
+  background-color: #fff3eb;
+	border-radius: 4rpx;
+  padding: 5rpx 9rpx;
+  margin-right: 10rpx;
+}
+/* 评分 */
+.body .homestay_info .star_box{
+  width: 136rpx;
+  height: 74rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  color: #2d2d2d;
+  font-family: FZDHTJW--GB1-0;
+	font-size: 34rpx;
+}
+.body .homestay_info .star_box .star{
+  width: 94rpx;
+  margin: 0 21rpx;
+  height: 14rpx;
+  position: relative;
+  background-position: 0 0;
+  background-size: 94rpx 100%;
+}
+.body .homestay_info .star_box .star image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.star .active{
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: 0 0;
+  background-size: 94rpx 100%;
+}
